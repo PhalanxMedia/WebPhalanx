@@ -48,6 +48,21 @@
 </head>
 
 <body>
+
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/5dabc2d378ab74187a5a8516/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+
 	<div class="wrap-body">
 
 		<header class="main-header">
@@ -80,9 +95,9 @@
 				<section class="content-box">
 					<div class="row wrap-box"><!--Start Box-->
 
-						<!--Start Map-->
-						<div id="map" style="height: 450px;"></div>
-						<!--End Map-->
+					<!--Start Map-->
+						<!--<div id="map" style="height: 450px;"></div>-->
+						<!--End Map--> 
 
 						<div class="contact-form">
 							<h3 class="t-center">Contact Form</h3>
@@ -112,6 +127,12 @@
 										</div>
 									</label>
 									<center><input class="button button-skin" type="submit" name="Submit" value="Submit"></center>
+									<label class="row">
+										<div class="wrap-col">
+											<center><h3>Email us to phalanxmeds@gmail.com</h3></center>
+											<center><h1>Or chat through tawk.to</h1></center>
+										</div>
+									</label>
 								</form>
 							</div>
 						</div>
@@ -122,7 +143,7 @@
 		</section>
 
 		<!--////////////////////////////////////Footer-->
-		<footer>
+		<!--<footer>
 			<div class="zerogrid">
 				<div class="wrap-footer">
 					<div class="row">
@@ -185,71 +206,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer>-->
 
-		<!-- Google Map -->
-	<script>
-	  var marker;
-	  var image = 'images/map-marker.png';
-      function initMap() {
-        var myLatLng = {lat: 39.79, lng: -86.14};
-
-		// Specify features and elements to define styles.
-        var styleArray = [
-          {
-            featureType: "all",
-            stylers: [
-             { saturation: -80 }
-            ]
-          },{
-            featureType: "road.arterial",
-            elementType: "geometry",
-            stylers: [
-              { hue: "#000000" },
-              { saturation: 50 }
-            ]
-          },{
-            featureType: "poi.business",
-            elementType: "labels",
-            stylers: [
-              { visibility: "off" }
-            ]
-          }
-        ];
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          scrollwheel: false,
-		   // Apply the map style array to the map.
-          styles: styleArray,
-          zoom: 7
-        });
-
-        var directionsDisplay = new google.maps.DirectionsRenderer({
-          map: map
-        });
-
-		// Create a marker and set its position.
-        marker = new google.maps.Marker({
-          map: map,
-		  icon: image,
-		  draggable: true,
-          animation: google.maps.Animation.DROP,
-          position: myLatLng
-        });
-		marker.addListener('click', toggleBounce);
-      }
-
-	  function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
-        } else {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap" async defer></script>
-
-	</div>
 </body>
 </html>

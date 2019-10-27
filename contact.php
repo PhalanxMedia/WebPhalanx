@@ -1,5 +1,4 @@
 <?php
-// Free html5 templates : http://www.zerotheme.com
 
 $text = "<span style='color:red; font-size: 35px; line-height: 40px; magin: 10px;'>Error! Please try again.</span>";
 
@@ -10,11 +9,11 @@ if(isset($_POST['submitcontact']))
 	$message=$_POST['message'];
 	$subject=$_POST['subject'];
 
-	$to = "goblogsialan@gmail.com";
-	$subject = "Zerotheme - Testing Contact Form";
+	$to = "phalanxmeds@gmail.com";
+	$subject = "Contact Form";
 	$message = " Name: " . $name ."\r\n Email: " . $email . "\r\n Message:\r\n" . $message;
 	 
-	$from = "Zerotheme dot com";
+	$from = "Phalanx Media";
 	$headers = "From:" . $from . "\r\n";
 	$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n"; 
 	 
@@ -36,7 +35,7 @@ if(isset($_POST['submitcontact']))
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Goblog's Cheap VCC</title>
+	<title>Phalanx Media</title>
 	<meta name="description" content="Free Responsive Html5 Css3 Templates | Zerotheme.com">
 	<meta name="author" content="http://www.Zerotheme.com">
 	
@@ -61,21 +60,24 @@ if(isset($_POST['submitcontact']))
 	<!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
 	
-	<!--[if lt IE 8]>
-       <div style=' clear: both; text-align:center; position: relative;'>
-         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
-           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-      </div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-		<script src="js/html5.js"></script>
-		<script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
 	
 </head>
 
 <body>
+
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/5dabc2d378ab74187a5a8516/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
 	<div class="wrap-body">
 		
 		<header class="main-header">
@@ -83,7 +85,7 @@ if(isset($_POST['submitcontact']))
 				<div class="row">
 					<div class="col-1-3">
 						<a class="site-branding" href="index.html">
-							<img src="images/logo.png"/>	
+							<img src="images/phalanx2.png"/>	
 						</a><!-- .site-branding -->
 					</div>
 					<div class="col-2-3">
@@ -91,8 +93,7 @@ if(isset($_POST['submitcontact']))
 						<div id='cssmenu' class="align-right">
 							<ul>
 							   <li><a href='index.html'><span>Home</span></a></li>
-							   <li><a href='single.html'><span>About</span></a></li>
-							   <li><a href='archive.html'><span>Blog</span></a></li>
+							   <li><a href='archive.html'><span>Products</span></a></li>
 							   <li class="active"><a href='contact.html'><span>Contacts</span></a></li>
 							</ul>
 						</div>
@@ -108,9 +109,9 @@ if(isset($_POST['submitcontact']))
 				<section class="content-box">
 					<div class="row wrap-box"><!--Start Box-->
 					
-						<!--Start Map-->
+						<!--
 						<div id="map" style="height: 450px;"></div>
-						<!--End Map-->
+						End Map-->
 						
 						<div class="contact-form">
 							<h3 class="t-center">Contact Form</h3>
@@ -145,6 +146,12 @@ if(isset($_POST['submitcontact']))
 										</div>
 									</label>
 									<center><input class="button button-skin" type="submit" name="Submit" value="Submit"></center>
+									<label class="row">
+										<div class="wrap-col">
+											<center><h3>Email us to phalanxmeds@gmail.com</h3></center>
+											<center><h1>Or chat through tawk.to</h1></center>
+										</div>
+									</label>
 								</form>
 							</div>
 						</div>
@@ -155,7 +162,7 @@ if(isset($_POST['submitcontact']))
 		</section>
 		
 		<!--////////////////////////////////////Footer-->
-		<footer>
+		<!--<footer>
 			<div class="zerogrid">
 				<div class="wrap-footer">
 					<div class="row">
@@ -218,71 +225,8 @@ if(isset($_POST['submitcontact']))
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer>-->
 		
-		<!-- Google Map -->
-	<script>
-	  var marker;
-	  var image = 'images/map-marker.png';
-      function initMap() {
-        var myLatLng = {lat: 39.79, lng: -86.14};
 
-		// Specify features and elements to define styles.
-        var styleArray = [
-          {
-            featureType: "all",
-            stylers: [
-             { saturation: -80 }
-            ]
-          },{
-            featureType: "road.arterial",
-            elementType: "geometry",
-            stylers: [
-              { hue: "#000000" },
-              { saturation: 50 }
-            ]
-          },{
-            featureType: "poi.business",
-            elementType: "labels",
-            stylers: [
-              { visibility: "off" }
-            ]
-          }
-        ];
-		
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          scrollwheel: false,
-		   // Apply the map style array to the map.
-          styles: styleArray,
-          zoom: 7
-        });
-
-        var directionsDisplay = new google.maps.DirectionsRenderer({
-          map: map
-        });
-
-		// Create a marker and set its position.
-        marker = new google.maps.Marker({
-          map: map,
-		  icon: image,
-		  draggable: true,
-          animation: google.maps.Animation.DROP,
-          position: myLatLng
-        });
-		marker.addListener('click', toggleBounce);
-      }
-	  
-	  function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
-        } else {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap" async defer></script>
-	
-	</div>
 </body>
 </html>
